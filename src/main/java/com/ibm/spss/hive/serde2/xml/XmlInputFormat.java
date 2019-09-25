@@ -151,7 +151,7 @@ public class XmlInputFormat extends TextInputFormat {
                 if (withinBlock) {
                     this.buffer.write(b);
                 }
-                if (b == match[i]) {
+                if (b == (match[i] & 0xFF)) {
                     i++;
                     if (i >= match.length) {
                         return true;
